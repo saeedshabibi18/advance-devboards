@@ -1,5 +1,5 @@
 name: Ci-pipeline
- on:
+on:
   push:
     branches:
       - advanced
