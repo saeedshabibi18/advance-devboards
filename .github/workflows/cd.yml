@@ -38,8 +38,9 @@ jobs:
               username: ${{ secrets.SERVER_USER }}   #azureuser
               key: ${{ secrets.SERVER_SSH_KEY }}
               script: |
-                sudo install docker-compose -o /usr/local/bin/docker-compose
-                cd devboard/
+                cd devboard/advance-devboards
                 docker compose pull
                 docker compose up -d --build
 
+
+                
