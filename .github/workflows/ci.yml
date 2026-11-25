@@ -50,18 +50,3 @@ jobs:
         run: |
             cd backend && go test ./...
             echo "Backend tests completed successfully."
-  build-and-deploy:
-     runs-on: ubuntu-latest
-     needs: Test
-     steps:
-      - name: Checkout code
-        uses: actions/checkout@v3
-      
-      - name: docker build frontend
-        run: |
-          cd frontend && docker build -t frontend:latest .
-          echo "Frontend Docker image built successfully."
-      - name: docker build backend
-        run: |
-          cd backend && docker build -t backend:latest .
-          echo "Backend Docker image built successfully."
